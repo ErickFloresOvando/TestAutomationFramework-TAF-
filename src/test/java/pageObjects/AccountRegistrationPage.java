@@ -37,6 +37,8 @@ public class AccountRegistrationPage extends BasePage {
     WebElement msgConfirmation;
     @FindBy(xpath = "//div[contains(@class,'alert-dismissible')]")
     WebElement msgWarning;
+    @FindBy(xpath = "//div[contains(@class,'text-danger')]")
+    WebElement msgPasswordWarning;
 
 
     //Action methods
@@ -102,6 +104,14 @@ public class AccountRegistrationPage extends BasePage {
     public String getWarningMsg() {
         try {
             return (msgWarning.getText());
+        } catch (Exception e) {
+            return (e.getMessage());
+        }
+    }
+
+    public String getPasswordWarningMsg() {
+        try {
+            return (msgPasswordWarning.getText());
         } catch (Exception e) {
             return (e.getMessage());
         }

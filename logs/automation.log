@@ -5,3 +5,13 @@
 14:07:39.154 [main] INFO  testCases.accountManagement.RegisterPageTest - Clicked on Register Link
 14:07:49.743 [main] INFO  testCases.accountManagement.RegisterPageTest - Validating expected message...
 14:07:49.766 [main] INFO  testCases.accountManagement.RegisterPageTest - **** Finished [TC-002] Registro fallido por email duplicado ****
+13:59:41.984 [main] INFO  testCases.accountManagement.RegisterPageTest - **** Starting [TC-003] Registro fallido por contraseñas no coincidentes ****
+13:59:42.121 [main] INFO  testCases.accountManagement.RegisterPageTest - Clicked on MyAccount Link
+13:59:43.260 [main] INFO  testCases.accountManagement.RegisterPageTest - Clicked on Register Link
+13:59:53.695 [main] INFO  testCases.accountManagement.RegisterPageTest - Validating expected message...
+13:59:53.717 [main] INFO  testCases.accountManagement.RegisterPageTest - **** Finished [TC-003] Registro fallido por contraseñas no coincidentes ****
+14:38:17.296 [main] INFO  testCases.accountManagement.RegisterPageTest - **** Starting [TC-003] Registro fallido por contraseñas no coincidentes ****
+14:38:18.443 [main] INFO  testCases.accountManagement.RegisterPageTest - Clicked on MyAccount Link
+14:38:19.141 [main] INFO  testCases.accountManagement.RegisterPageTest - Clicked on Register Link
+14:38:29.335 [main] INFO  testCases.accountManagement.RegisterPageTest - Validating expected message...
+14:38:29.362 [main] INFO  testCases.accountManagement.RegisterPageTest - **** Finished [TC-003] Registro fallido por contraseñas no coincidentes ****

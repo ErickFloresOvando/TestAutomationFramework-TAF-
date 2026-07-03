@@ -64,6 +64,14 @@ public class ExtentReportManager implements ITestListener {
         test.assignCategory(result.getMethod().getGroups()); // to display groups in report
         test.log(Status.PASS, result.getName() + " got successfully executed");
 
+        try {
+            // Añadimos el sufijo _SUCCESS para identificar el archivo
+            String imgPath = new BaseClass().captureScreen(result.getName() + "_SUCCESS");
+            test.addScreenCaptureFromPath(imgPath);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public void onTestFailure(ITestResult result){
@@ -74,7 +82,7 @@ public class ExtentReportManager implements ITestListener {
         test.log(Status.INFO, result.getThrowable().getMessage());
 
         try{
-            String imgPath = new BaseClass().captureScreen(result.getName());
+            String imgPath = new BaseClass().captureScreen(result.getName()+ "_FAILURE");
             test.addScreenCaptureFromPath(imgPath);
         }catch (IOException e1){
             e1.printStackTrace();
