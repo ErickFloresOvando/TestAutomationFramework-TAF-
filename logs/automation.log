@@ -15,3 +15,18 @@
 14:38:19.141 [main] INFO  testCases.accountManagement.RegisterPageTest - Clicked on Register Link
 14:38:29.335 [main] INFO  testCases.accountManagement.RegisterPageTest - Validating expected message...
 14:38:29.362 [main] INFO  testCases.accountManagement.RegisterPageTest - **** Finished [TC-003] Registro fallido por contraseñas no coincidentes ****
+19:20:03.640 [main] INFO  testCases.accountManagement.RegisterPageTest - **** Starting [TC-004] Validar campos obligatorios vacíos ****
+19:20:03.726 [main] INFO  testCases.accountManagement.RegisterPageTest - Clicked on MyAccount Link
+19:20:04.441 [main] INFO  testCases.accountManagement.RegisterPageTest - Clicked on Register Link
+19:20:05.787 [main] INFO  testCases.accountManagement.RegisterPageTest - Validating expected message...
+19:20:05.820 [main] ERROR testCases.accountManagement.RegisterPageTest - Test Failed
+19:30:17.930 [main] INFO  testCases.accountManagement.RegisterPageTest - **** Starting [TC-004] Validar campos obligatorios vacíos ****
+19:30:18.009 [main] INFO  testCases.accountManagement.RegisterPageTest - Clicked on MyAccount Link
+19:30:18.657 [main] INFO  testCases.accountManagement.RegisterPageTest - Clicked on Register Link
+19:30:19.920 [main] INFO  testCases.accountManagement.RegisterPageTest - Validating expected message...
+19:30:19.953 [main] ERROR testCases.accountManagement.RegisterPageTest - Test Failed
+19:40:52.829 [main] INFO  testCases.accountManagement.RegisterPageTest - **** Starting [TC-004] Validar campos obligatorios vacíos ****
+19:40:52.903 [main] INFO  testCases.accountManagement.RegisterPageTest - Clicked on MyAccount Link
+19:40:53.538 [main] INFO  testCases.accountManagement.RegisterPageTest - Clicked on Register Link
+19:40:54.728 [main] INFO  testCases.accountManagement.RegisterPageTest - Validating expected message...
+19:40:54.762 [main] INFO  testCases.accountManagement.RegisterPageTest - **** Finished [TC-004] Validar campos obligatorios vacíos ****

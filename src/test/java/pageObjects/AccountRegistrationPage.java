@@ -39,6 +39,18 @@ public class AccountRegistrationPage extends BasePage {
     WebElement msgWarning;
     @FindBy(xpath = "//div[contains(@class,'text-danger')]")
     WebElement msgPasswordWarning;
+    @FindBy(xpath = "//*[@id=\"account\"]/div[2]/div/div")
+    WebElement msgFirstNameWarning;
+    @FindBy(xpath = "//*[@id=\"account\"]/div[3]/div/div")
+    WebElement msgLastNameWarning;
+    @FindBy(xpath = "//*[@id=\"account\"]/div[4]/div/div")
+    WebElement msgEmailWarning;
+    @FindBy(xpath = "//*[@id=\"account\"]/div[5]/div/div")
+    WebElement msgTelephoneWarning;
+    @FindBy(xpath = "//*[@id=\"content\"]/form/fieldset[2]/div[1]/div/div")
+    WebElement msgPasswordLengthWarning;
+    @FindBy(xpath = "//*[@class=\"alert alert-danger alert-dismissible\"]")
+    WebElement privacyPolicyWarning;
 
 
     //Action methods
@@ -112,6 +124,22 @@ public class AccountRegistrationPage extends BasePage {
     public String getPasswordWarningMsg() {
         try {
             return (msgPasswordWarning.getText());
+        } catch (Exception e) {
+            return (e.getMessage());
+        }
+    }
+
+    public String getPrivacyPolicyWarningMsg() {
+        try {
+            return (privacyPolicyWarning.getText());
+        } catch (Exception e) {
+            return (e.getMessage());
+        }
+    }
+
+    public String getFirstNameWarningMsg() {
+        try {
+            return (msgFirstNameWarning.getText());
         } catch (Exception e) {
             return (e.getMessage());
         }

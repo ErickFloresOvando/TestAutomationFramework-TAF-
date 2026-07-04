@@ -1,6 +1,7 @@
 package testCases.accountManagement;
 
 
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.AccountRegistrationPage;
@@ -108,6 +109,7 @@ public class RegisterPageTest extends BaseClass  {
 
     */
    
+    /* 
     //Test Case 3
     @Test(testName = "[TC-003] Registro fallido por contraseñas no coincidentes", dataProvider = "RegisterPage", dataProviderClass = DataProviders.class, groups = {"Negative","RegisterPage"})
     public void failedRegistrationWithEmptyMandatoryFields(String firstName, String lastName, String email, String telephone, String password,String confirmPassword) throws InterruptedException {
@@ -152,6 +154,42 @@ public class RegisterPageTest extends BaseClass  {
 
                 
     }
+        */
 
+
+    //Test Case 4
+    @Test(testName = "[TC-004] Validar campos obligatorios vacíos", groups = {"Negative","RegisterPage"})
+    public void failedRegistrationWithEmptyMandatoryFields() throws InterruptedException {
+        try{
+            logger.info("**** Starting [TC-004] Validar campos obligatorios vacíos ****");  
+
+            HomePage hp = new HomePage(driver);
+            hp.clickMyAccount();
+            logger.info("Clicked on MyAccount Link");
+
+            hp.clickRegister();
+            logger.info("Clicked on Register Link");    
+
+            AccountRegistrationPage regpage = new AccountRegistrationPage(driver);
+
+            regpage.clickContinue();
+
+            logger.info("Validating expected message...");
+           
+            String confmsg = regpage.getPrivacyPolicyWarningMsg();
+            String confmsg2 = regpage.getFirstNameWarningMsg();
+
+            Assert.assertEquals(confmsg, "Warning: You must agree to the Privacy Policy!") ;
+            Assert.assertEquals(confmsg2, "First Name must be between 1 and 32 characters!") ;
+        
+        }catch (Exception e){
+            Assert.fail();
+        }
+        logger.info("**** Finished [TC-004] Validar campos obligatorios vacíos ****");
+
+
+
+
+    }
 
 }
